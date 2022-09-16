@@ -1,14 +1,13 @@
+/**
+ * Rutas de usuarios / Auth
+ * host + /api/auth
+ */
 const { Router } = require('express');
 const { check } = require('express-validator');
 const { createUser, loginUser, renewToken } = require('../controllers/auth');
 const { fieldValidators } = require('../middlewares/fieldValidators');
 const { validateJWT } = require('../middlewares/validateJWT');
 const router = Router();
-
-/**
- * Rutas de usuarios / Auth
- * host + /api/auth
- */
 
 router.post(
   '/new',

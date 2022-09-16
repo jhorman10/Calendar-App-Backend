@@ -5,7 +5,7 @@ const generateJWT = (uid, name) => {
 
   try {
     const token = jwt.sign(payload, process.env.SECRET_JWT_SEED, {
-      expiresIn: '2h',
+      expiresIn: '4h',
     });
     return token;
   } catch (err) {
